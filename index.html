@@ -1,144 +1,431 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY Collage</title>
+    <title>complete responsive service website design tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,100;1,200;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
 </head>
 <body>
-     <div class="header">
-        <nav>
-            <a href="index.html"><img src="IMAGES/logo.png" class="logo"></a>
-            <div class="nav-link">
-                <i class="fa fa-times" onclick="hidemenu()"></i>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="">Course</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Policy</a></li>
-                    <li><a href="About.html">About</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars"></i>
-        </nav>
-        <div class="text-box">
-            <h1>That's My Collage</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, asperiores animi rerum porro deleniti, ad blanditiis, alias quo harum reiciendis omnis sed ducimus voluptates sapiente ut neque eum saepe quod?</p>
-            <a href="" class="hero-btn">Visit us know more</a>
-        </div>
-     </div>
-     <section class="course">
-        <h1>Product we offer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda ipsa rem enim alias atque architecto nisi laudantium. Odio quo ratione omnis ea aliquam unde ad recusandae molestiae aut reiciendis.</p>
+    
+<!-- header section starts  -->
 
-        <div class="row">
-            <div class="col-course">
-                <h3>Highschool</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quaerat quisquam laboriosam excepturi natus ipsum perspiciatis totam. Consequatur nemo exercitationem porro </p>
-            </div>
-            <div class="col-course">
-                <h3>Intermiadiate</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quaerat quisquam laboriosam excepturi natus ipsum perspiciatis totam. Consequatur nemo exercitationem porro </p>
-            </div>
-            <div class="col-course">
-                <h3>Graduaction</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quaerat quisquam laboriosam excepturi natus ipsum perspiciatis totam. Consequatur nemo exercitationem porro </p>
-            </div>
-            <div class="col-course">
-                <h3>Post-Graduation</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quaerat quisquam laboriosam excepturi natus ipsum perspiciatis totam. Consequatur nemo exercitationem porro </p>
+<header>
+
+    <a href="Book.html" class="logo">R security center</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a style="--i:0;" href="#home">home</a>
+        <a style="--i:1;" href="#feature">feature</a>
+        <a style="--i:2;" href="#service">service</a>
+        <a style="--i:3;" href="#project">project</a>
+        <a style="--i:4;" href="#team">team</a>
+        <a style="--i:5;" href="#price">price</a>
+        <a style="--i:6;" href="Book.html">Booking</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Find your Home servics here</h3>
+        <p>Your Tech Problems, Our Expert Solutions,
+            We will Provide best home service at your home on your demand
+        </p>
+        <a href="Book.html" class="btn">Booking Here</a>
+    </div>
+
+    <div class="image">
+        <img src="images/home-img.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+
+<section class="feature" id="feature">
+
+    <h1 class="heading"> Our Popular service </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="Image/cctv-s.png" alt="">
+            <h3>CCTV Camera installation</h3>
+            <p> Clear Vision, Better Security: Our CCTV Installation Promise</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="Image/laptop-s.png" alt="">
+            <h3>Laptop & Desktop repairing</h3>
+            <p> Your Laptop, Our Expertise: Where Reliability Meets Repair.</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="Image/newpc.png" alt="">
+            <h3>New Gaming Pc Build</h3>
+            <p> Game On! Elevate Your Play with Our Custom PC Builds.</p>
+            <a href="Book.html" class="btn">Book now </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- features section edns -->
+
+<!-- service section starts  -->
+
+<section class="service" id="service">
+
+    <h1 class="heading">services & Producs </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="Image/laptop-s.png" alt="">
+            <h3>Refurbished laptop</h3>
+            <p> Renewed Performance, Remarkable Value: Refurbished Laptops</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="Image/securitysystem.png" sizes="100px,99px" alt="">
+            <h3>Security sytems</h3>
+            <p> Securing What Matters Most: Your Trusted Security System</p>
+            <p> Securing What Matters Most: Your Trusted Security System</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="Image/dsktop.png" alt="">
+            <h3>Computer accessories</h3>
+            <p> "Elevate, Connect, Perform: Accessories for Every Need"</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+        
+        <div class="box">
+            <img src="Image/datarecovery.png" alt="">
+            <h3>Data recovry</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda!</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="images/s1.png" alt="">
+            <h3>digital marketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda!</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="Image/24hours.png" alt="">
+            <h3>24/7 custmer support</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda!</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- project section starts  -->
+
+<section class="project" id="project">
+
+    <h1 class="heading">our goal</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="number">01</span>
+            <img src="images/port-img1.jpg"0 al00t="">
+            <div class="info">
+                <h3></h3>
+                <p>01 / 05 / 2024</p>
             </div>
         </div>
 
+        <div class="box">
+            <span class="number">02</span>
+            <img src="images/port-img2.jpg" alt="">
+            <div class="info">
+                <h3>upgrade everyday</h3>
+                <p>01 / 05 / 2024</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="num00000000000...........ber">03</span>
+            <img src="images/port-img3.jpg" alt="">
+            <div class="info">
+                <h3>social media marketing</h3>
+                <p>01 / 05 / 2021</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="number">04</span>
+            <img src="images/port-img4.jpg" alt="">
+            <div class="info">
+                <h3>content marketing</h3>
+                <p>01 / 05 / 2024</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="number">05</span>
+            <img src="images/port-img5.jpg" alt="">
+            <div class="info">
+                <h3>capture whole market</h3>
+                <p>01 / 05 / 2024</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="number">06</span>
+            <img src="images/port-img6.jpg" alt="">
+            <div class="info">
+                <h3>Connect with our customer</h3>
+                <p>01 / 05 / 2024</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- project section ends -->
+
+<!-- team section starts  -->
+
+<section class="team" id="team">
+
+    <h1 class="heading">our team</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="Image/profile_3135715.png" alt="">
+            <h3>john deo</h3>
+            <span>web optimizer</span>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dignissimos totam est veritatis omnis tempora, vitae enim quod quibusdam ducimus!</p> -->
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <img src="Image/profile_3135715.png" alt="">
+            <h3>john deo</h3>
+            <span>web optimizer</span>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dignissimos totam est veritatis omnis tempora, vitae enim quod quibusdam ducimus!</p> -->
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box"> 
+            <img src="Image/profile_3135715.png" alt="">
+            <h3>john deo</h3>
+            <span>web optimizer</span>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dignissimos totam est veritatis omnis tempora, vitae enim quod quibusdam ducimus!</p> -->
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box"> 
+            <img src="Image/profile_3135715.png" alt="">
+            <h3>john deo</h3>
+            <span>web optimizer</span>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dignissimos totam est veritatis omnis tempora, vitae enim quod quibusdam ducimus!</p> -->
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- team section ends -->
+
+<!-- price section starts  -->
+
+<section class="price" id="price">
+
+    <h1 class="heading">our pricing plans</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/p1.png" alt="">
+            <h3>CCTV Camera Installation</h3>
+            <div class="amount"><span>Start at-/ ₹</span>399</div>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="images/p2.png" alt="">
+            <h3>Laptop & Desktop repairing</h3>
+            <div class="amount"><span>Start at-/ ₹</span>300</div>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <a href="Book.html" class="btn">Book now</a>
+        </div>
+
+        <div class="box">
+            <img src="images/p3.png" alt="">
+            <h3>New Gaming pc assembled</h3>
+            <div class="amount"><span>Start at-/ ₹</span>5999</div>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <a href="Book.html" class="btn"> Book now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- price section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">contact us</h1>
+
+    <div class="row">
+
+        <form action="https://formspree.io/f/meqbzkdv" method="post">
+
+            <div class="inputBox">
+                <input type="text" required id="name">
+                <label>name</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" required id="email">
+                <label>email</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="number" required id="number">
+                <label>number</label>
+            </div>
+
+            <div class="inputBox">
+                <textarea required name="" id="message" cols="30" rows="10"></textarea>
+                <label>message</label>
+            </div>
+
+            <input type="submit" class="btn" value="send message">
+
+        </form>
+<!-- 
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1619943375027!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe> -->
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt veniam eum in libero delectus sit reprehenderit velit similique! Ad, ea!.</p>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">feature</a>
+            <a href="#">service</a>
+            <a href="#">project</a>
+            <a href="#">team</a>
+            <a href="#">price</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>category</h3>
+            <a href="#">digital marketing</a>
+            <a href="#">media marketing</a>
+            <a href="#">content marketing</a>
+            <a href="#">email marketing</a>
+            <a href="#">seo marketing</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> &copy; copyright by <a href="#"> R security center </a> @ 2023 </h1>
+
+</div>
 
 
-     </section>
-     <section class="campus">
-        <h1>Our Best Campus</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam error iure ipsam?</p>
-        <div class="row">
-            <div class="campus-col">
-                <img src="IMAGES/london.png" class="img">
-                <div class="layer">
-                    <h3>LONDON</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div class="campus-col">
-                <img src="IMAGES/newyork.png" class="img">
-                <div class="layer">
-                    <h3>NEW-YORK</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div class="campus-col">
-                <img src="IMAGES/washington.png" class="img">
-                <div class="layer">
-                    <h3>WASHINTON</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-        </div>
-     </section>
-     <section class="facility">
-        <h1>Our facilities</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt expedita illo.</p>
-        <div class="row">
-            <div class="facility-col">
-                <img src="IMAGES/library.png">
-                <h3>World Class Library</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate porro soluta eius iste accusantium omnis beatae saepe nam rerum animi.</p>
-            </div>
-            <div class="facility-col">
-                <img src="IMAGES/basketball.png">
-                <h3>All Sports facilities Availabal</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate porro soluta eius iste accusantium omnis beatae saepe nam rerum animi.</p>
-            </div>
-            <div class="facility-col">
-                <img src="IMAGES/cafeteria.png">
-                <h3>World Class Library</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate porro soluta eius iste accusantium omnis beatae saepe nam rerum animi.</p>
-            </div>
-        </div>
-     </section>
-     <section class="review">
-        <h1>What Our User Say</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, consequatur.</p>
-        <div class="row">
-            <div class="test-col">
-                <img src="IMAGES/user1.jpg">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti asperiores at, ab delectus praesentium hic reprehenderit harum optio aliquid quidem ducimus laborum ipsum consequuntur!</p>
-                <h3>Bella</h3>
-            </div>
-            <div class="test-col">
-                <img src="IMAGES/user2.jpg">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti asperiores at, ab delectus praesentium hic reprehenderit harum optio aliquid quidem ducimus laborum ipsum consequuntur!</p>
-                <h3>Devil</h3>
-            </div>
-        </div>
-     </section>
-     <section class="cta">
-        <h1>You can Also Contact Us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis earum laboriosam aperiam vel excepturi soluta. Vero eveniet qui mollitia dolorum distinctio.</p>
-        <a href="" class="hero-btn">CONTACT US</a>
-     </section>
- <!-- about us -->
- <section class="about">
-    <h1>ABOUT US</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem et quae quia eveniet nulla, placeat sapiente error, asperiores, pariatur laborum non. Autem, rem veniam. Dolor ratione molestias dicta porro.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem et quae quia eveniet nulla, placeat sapiente error, asperiores, pariatur laborum non. Autem, rem veniam. Dolor ratione molestias dicta porro.</p>
-    <i class="fa fa-facebook" aria-hidden="true"></i>
- </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
 </body>
 </html>
-
-
-
 
 
 
