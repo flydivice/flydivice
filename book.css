@@ -617,7 +617,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: url(IMAGES/banar.jpg);
+    background: url(IMAGES/home-bg);
     background-size: cover;
 }
 
