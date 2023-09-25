@@ -1,104 +1,450 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="IMAGES/logo.png">
-    <title>Booking home service</title>
-    <meta name="viewport" content="width=device-width,
-      initial-scale=1.0"/>
-    <link rel="stylesheet" href="book.css" />
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+  
+ 
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background: url(Image/banar.jpg) no-repeat;
+}
 
-  </head>
-  <body>
+/* Style the container */
+.container {
+    max-width: 600px;
+    margin: 85px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;     
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Style the form */
+form {
+    margin-top: 20px;
+}
+
+/* Style the form input fields and labels */
+.form-input {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the button */
+button {
+    background-color: #ff7b00;
+    position: center;
+    color: #fff;
+    padding: 10px 270px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4827ff;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    button{
+        padding: 10px 190px;
+        font-weight: 700;
+    }
+}
+ 
+ /* Style the dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the dropdown arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Style the dropdown options */
+select option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Start header here */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
+
+:root{
+  --black:#192a56;
+  --orange:#F95F1D;
+  --yellow:#d4c009;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section{
+  padding:0 7%;
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding:.7rem 2.5rem;
+  font-size: 1.7rem;
+  color:var(--yellow);
+  border:.2rem solid var(--yellow);
+  cursor: pointer;
+  background:none;
+}
+
+.btn:hover{
+  background:var(--yellow);
+  color:#fff;
+}
+
+.heading{
+  text-align: center;
+  color:var(--black);
+  padding:1rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+
+header{
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  z-index: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 7%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  background:#fff;
+  z-index: 1000;
+}
+
+header .logo{
+  font-size: 2.5rem;
+  color:#666;
+  font-weight: bolder;
+}
+
+header .navbar a{
+  font-size: 2rem;
+  margin-left: 2.5rem;
+  color:var(--black);
+}
+
+header .navbar a:hover{
+  color:var(--orange);
+}
+
+#menu-bar{
+  font-size: 3rem;
+  color:var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  background:url(Image/banar.jpg) no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+  background-position: center;
+  flex-wrap: wrap;
+}
+
+.home .image{
+  padding-top: 4rem;
+  flex:1 1 40rem;
+}
+
+.home .content{
+  padding:1rem;
+  flex:1 1 40rem;
+}
+
+.home .content h3{
+  color:#fff;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+}
+
+.home .content p{
+  color:#fff;
+  font-size: 1.7rem;
+}
+
+.home .image img{
+  width:100%;
+}
+
+.home .content .btn{
+  color:#444;
+  background:#fff;
+}
+
+.home .content .btn:hover{
+  color:#fff;
+  background:none;
+  border-color: #fff;
+}
+ 
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+  html{
+    font-size: 55%;
+  }
+
+}
+
+@media (max-width:991px){
+
+  section{
+    padding:0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: block;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; left: 0;
+    width:100%;
+    background:#eee;
+    height:calc(100vh - 100%);
+    border-top: .1rem solid rgba(0,0,0,.2);
+    display: none;
+  }
+
+  header .navbar.nav-toggle{
+    display: block;
+  }
+
+  header .navbar a{
+    margin:1rem;
+    display: block;
+    padding:1.3rem 0;
+    background:#fff;
+    text-align: center;
+    border:.1rem solid #444;
+    animation: nav-links .5s linear backwards;
+    animation-delay: calc(.2s * var(--i));
+  }
+
+  @keyframes nav-links{
+      0%{
+        transform:translateY(-50rem);
+        opacity: 0;
+      }
+  }
+
+  .fa-times{
+    transform: rotate(180deg);
+  }
+
+  .home .content{
+    text-align: center;
+  }
+
+  .home .content h3{
+    font-size: 4rem;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading{
+    font-size: 3.5rem;
+  }
+
+  .team .box-container .box{
+    width:100%;
+  }
+
+}
+
+
+</style>
+<body>
+    <header>
+
+        <img src="images/logo_size1.jpg"  class="logo" sizes="160px" >
     
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <nav class="navbar">
+            <a style="--i:0;" href="#home">home</a>
+            <a style="--i:1;" href="#feature">feature</a>
+            <a style="--i:2;" href="#service">service</a>
+            <a style="--i:3;" href="#project">project</a>
+            <a style="--i:4;" href="#team">team</a>
+            <a style="--i:5;" href="#price">price</a>
+            <a style="--i:6;" href="Book.html">Booking</a>
+        </nav>
+    
+    </header>
+   <div class="container">
+    <h1>Book Here Your Home service</h1>
 
-<!-- header sectioin  -->
-<header>
+    <div class="main">
+     <form action="">
 
-  <a href="index.html" class="logo">R security center</a>
-
-  <div id="menu-bar" class="fas fa-bars"></div>
-
-  <nav class="navbar">
-      <a style="--i:0;" href="index.html">home</a>
-      <a style="--i:1;" href="#feature">feature</a>
-      <a style="--i:2;" href="#service">service</a>
-      <a style="--i:3;" href="#project">project</a>
-      <a style="--i:4;" href="#team">team</a>
-      <a style="--i:5;" href="#price">price</a>
-      <a style="--i:6;" href="Book.html">Booking</a>
-  </nav>
-
-</header>
-
-<!-- header section end -->
-
-    <div class="container">
-      <h1 class="form-title">Book your Service</h1>
-      <form action="https://formspree.io/f/meqbzkdv" method="post">
-        <div class="main-user-info">
-          <div class="user-input-box">
-            <label for="fullName">Full Name</label>
-            <input type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Enter Full Name"/>
-          </div>
-          <div class="user-input-box">
-            <label for="username">Username</label>
-            <input type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Enter Username"/>
-          </div>
-          <div class="user-input-box">
-            <label for="email">Email</label>
-            <input type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter Email"/>
-          </div>
-          <div class="user-input-box">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    placeholder="Enter Phone Number"/>
-          </div>
-          <div class="user-input-box">
-            <label for="password">Service</label>
-            <input type="text"
-                    id="password"
-                    name="password"
-                    placeholder="Please enter your service "/>
-          </div>
-          <div class="user-input-box">
-            <label for="confirmPassword">Address</label>
-            <input type="text"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    placeholder="Please enter your address for home service"/>
-          </div>
+        <div class="form-input">
+             <label for="">Name</label><br>
+             <input type="text" placeholder="Enter your Name:" id="name">
         </div>
-        <!-- <div class="gender-details-box">
-          <span class="gender-title">Gender</span>
-          <div class="gender-category">
-            <input type="radio" name="gender" id="male">
-            <label for="male">CCTV Camera installation</label>
-            <input type="radio" name="gender" id="female">
-            <label for="female">Laptop & Desktop Re </label>
-            <input type="radio" name="gender" id="other">
-            <label for="other">Other</label>
-          </div>
-        </div> -->
-        <div class="form-submit-btn">
-          <input type="submit" value="Register">
+
+        <div class="form-input">
+            <label for="">Email</label><br>
+            <input type="text" placeholder="Enter your Email:" id="email">
         </div>
-      </form>
+
+        <div class="form-input">
+            <label for="">Contact Number</label><br>
+            <input type="text" placeholder="Enter your Contact number:" id="contact">
+        </div>
+
+        <div class="form-input">
+            <label for="">Please Select Your Service</label><br>
+            
+            <select placeholder="Please select your service" id="subject">
+                <option placeholder="service" value="card">CCTV Installation</option>
+                <option value="bike">Laptop Repairing</option>
+                <option value="bike">Desktop Repairing</option>
+                <option value="plan">Gaming pc Assemble</option>
+                <option value="plan">Simple pc Assemble</option>
+            </select>
+        </div>
+
+        <div class="form-input">
+            <label for="">Messages</label><br>
+            <textarea name="" id="message" cols="31" rows="4" placeholder="Enter your message...."></textarea>
+        </div>
+
+        <div class="form-input">
+            <button type="button" onclick="SendEmail()"> Book</button>
+        </div>
+        
+     </form>
+
     </div>
+    <!-- end main class -->
+   </div>
+    <!--end Conatiner class  -->
+    
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+
+
     <script>
-      let menu = document.querySelector('#menu-bar');
+        function SendEmail(){
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let conatact = document.getElementById("contact").value;
+          let subject = document.getElementById("subject").value;
+          let message = document.getElementById("message").value;
+        
+          let body = "Name:" + name + "<br/> Email:" + email + "<br/> Contact Number:" + conatact + "<br/> Subject:" + subject + "<br/> Messages:" + message;
+          Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "rsc906854@gmail.com",
+    Password : "7D6A8C7E96587E68A103102849494B52F2E8",
+    To : 'sumitparihar235@gmail.com',
+    From : "rsc906854@gmail.com",
+    Subject : subject,
+    Body : body
+}).then(
+    message =>{
+                    if(message=='OK'){
+
+                        swal("Successfull", "Your Laptop Repairing service has been booked", "success");
+                    }
+                    else{
+
+                        swal("Something Wrong", "Your Data is not Received", "error");
+                    }
+                }
+              );
+
+
+            
+        }
+
+
+        let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 
 menu.addEventListener('click', () =>{
@@ -112,5 +458,7 @@ window.onscroll = () =>{
 }
 
     </script>
-  </body>
+
+ 
+</body>
 </html>
