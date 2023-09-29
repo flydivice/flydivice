@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Bar | CodingNepal</title>
+    <link rel="stylesheet" href="stylel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        /* custom scroll bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        ::selection{
+          background: rgb(0,123,255,0.3);
+        }
+        .content{
+          max-width: 1250px;
+          margin: auto;
+          padding: 0 30px;
+        }
+        .navbar{
+          position: fixed;
+          width: 100%;
+          z-index: 2;
+          padding: 25px 0;
+          transition: all 0.3s ease;
+        }
+        .navbar.sticky{
+          background: #fff;
+          padding: 10px 0;
+          box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+        }
+        .navbar .content{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .navbar .logo a{
+          color: #141414;
+          font-size: 25px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+        .navbar .menu-list{
+          display: inline-flex;
+        }
+        .menu-list li{
+          list-style: none;
+        }
+        .menu-list li a{
+          color: #070707;
+          font-size: 18px;
+          font-weight: 500;
+          margin-left: 25px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        .menu-list li a:hover{
+          color: #ee8128;
+        }
+        .banner{
+          background: url("banner.jpg") no-repeat;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }
+        .about{
+          padding: 30px 0;
+        }
+        .about .title{
+          font-size: 38px;
+          font-weight: 700;
+        }
+        .about p{
+          padding-top: 20px;
+          text-align: justify;
+        }
+        .icon{
+          color: #000000;
+          font-size: 20px;
+          padding-left: 30px ;
+          cursor: pointer;
+          display: none;
+        }
+        .menu-list .cancel-btn{
+          position: absolute;
+          right: 30px;
+          top: 20px;
+        }
+        @media (max-width: 1230px) {
+          .content{
+            padding: 0 60px;
+          }
+        }
+        @media (max-width: 1100px) {
+          .content{
+            padding: 0 40px;
+          }
+        }
+        @media (max-width: 900px) {
+          .content{
+            padding: 0 30px;
+          }
+        }
+        @media (max-width: 868px) {
+          body.disabled{
+            overflow: hidden;
+          }
+          .icon{
+            display: block;
+          }
+          .icon.hide{
+            display: none;
+          }
+          .navbar .menu-list{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            max-width: 400px;
+            left: -100%;
+            top: 0px;
+            display: block;
+            padding: 40px 0;
+            text-align: center;
+            background: #ebe3e3;
+            transition: all 0.3s ease;
+          }
+          .navbar.show .menu-list{
+            left: 0%;
+          }
+          .navbar .menu-list li{
+            margin-top: 45px;
+          }
+          .navbar .menu-list li a{
+            font-size: 23px;
+            margin-left: -100%;
+            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+          .navbar.show .menu-list li a{
+            margin-left: 0px;
+          }
+        }
+        @media (max-width: 380px) {
+          .navbar .logo a{
+            font-size: 27px;
+          }
+        }</style>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">Flydivice.com</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Booking</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href=" https://wa.me/918377849903">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  
+     
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesl.css" />
+    <title>flydivice.com</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"></div>
+      <!-- <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Offers</a></li>
+        <li class="link"><a href="#">Seats</a></li>
+        <li class="link"><a href="#">Destinations</a></li>
+      </ul> -->
+      <button class="btn">Contact</button>
+    </nav>
+    <header class="section__container header__container">
+      <h1 class="section__header">Boom Your Gaming <br />With our Gaming setup</h1>
+      <img src="IMAGES/pic17.jpg" alt="header" />
+    </header>
+
+    <section class="section__container booking__container">
+      <div class="booking__nav">
+        <a href="">WhatsApp</a>
+        <a href="">Book Here</a>
+        <a href="">Call</a>
+        
+      </div>
+      <form>         
+        <!-- <div class="form__group">
+          <span><i class="ri-map-pin-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>Location</label>
+            </div>
+            <p>Where are you goung?</p>
+          </div>
+        </div>
+        <div class="form__group">
+          <span><i class="ri-user-3-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="number" />
+              <label>Travellers</label>
+            </div>
+            <p>Add guests</p>
+          </div>
+        </div>
+        <div class="form__group">
+          <span><i class="ri-calendar-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>Departure</label>
+            </div>
+            <p>Add date</p>
+          </div>
+        </div>
+        <div class="form__group">
+          <span><i class="ri-calendar-line"></i></span>
+          <div class="input__content">
+            <div class="input__group">
+              <input type="text" />
+              <label>Return</label>
+            </div>
+            <p>Add date</p>
+          </div>
+        </div>
+        <button class="btn"><i class="ri-search-line"></i></button> -->
+      </form>
+    </section>
+
+    <section class="section__container plan__container">
+      <p class="subheader">24 Hour SUPPORT</p>
+      <h2 class="section__header">Build Gaming PC with Us </h2>
+      <p class="description">
+        We build Best Gaming pc with our 10year+   .
+      </p>
+      <div class="plan__grid">
+        <div class="plan__content">
+          <span class="number">01</span>
+          <h4>Do We charge anything for home visiting or Delivery?</h4>
+          <p>
+            Answer Is NO we did not take any charge for home visit Or Delivery.
+          </p>
+          <span class="number">02</span>
+          <h4>What is installtion Cost ?</h4>
+          <p>
+            installtion cost - 300 Rupey.
+          </p>
+          <span class="number">03</span>
+          <h4>How much do we guarantee ?</h4>
+          <p>
+            Min - 5 Year+ .
+          </p>
+        </div>
+        <div class="plan__image">
+          <img src="IMAGES/pic15.jpg" alt="plan" />
+          <img src="IMAGES/pic13.jpg" alt="plan" />
+          <img src="IMAGES/pic14.jpg" alt="plan" />
+        </div>
+      </div>
+    </section>
+
+    <section class="memories">
+      <div class="section__container memories__container">
+        <div class="memories__header">
+          <h2 class="section__header">
+            Your is our responsibility 
+          </h2>
+          <button class="view__all">View All</button>
+        </div>
+        <div class="memories__grid">
+          <div class="memories__card">
+            <span><i class="ri-calendar-2-line"></i></span>
+            <h4>Book & relax</h4>
+            <p>
+              After You has been booked the service our Agent wil visit your homoe and fix .
+            </p>
+          </div>
+          <div class="memories__card">
+            <span><i class="ri-shield-check-line"></i></span>
+            <h4>100% Original Part</h4>
+            <p>
+              we are providing 100% original cumputer parts with tax.
+            </p>
+          </div>
+          <div class="memories__card">
+            <span><i class="ri-bookmark-2-line"></i></span>
+            <h4>Save Money</h4>
+            <p>
+              You can save your money to our special offers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container lounge__container">
+      <div class="lounge__image">
+        <img src="IMAGES/pic5.jpg" alt="lounge" />
+        <img src="IMAGES/pic6.jpg" alt="lounge" />
+      </div>
+      <div class="lounge__content">
+        <h2 class="section__header"> Customize Your PC </h2>
+        <div class="lounge__grid">
+          <div class="lounge__details">
+            <h4>High quality processor</h4>
+            <p>
+              Empower Your Digital World with Our Processor Power.
+            </p><a href="#">Book Here</a>
+          </div>
+          <div class="lounge__details">
+            <h4>Computer Accessories </h4>
+            <p>
+              Customize your pc by best accessories keyboard-mouse-speaker.
+            </p><a href="#" >Book Here</a>
+          </div>
+          <div class="lounge__details">
+            <h4>Starting price </h4>
+            <p>
+              Our Pc starting price is ₹5000  .
+            </p><a href="#">Book Here</a>
+          </div>
+          <div class="lounge__details">
+            <h4>Other Details
+
+
+            </h4>
+            <p>
+              
+            </p><a href="#">Book Here</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container travellers__container">
+      <h2 class="section__header">Some customer</h2>
+      <div class="travellers__grid">
+        <div class="travellers__card">
+          <img src="assets/traveller-1.jpg" alt="______" />
+          <div class="travellers__card__content">
+            <img src="IMAGES/client1.jpg" alt="client" />
+            <h4>Parag</h4>
+            <p>New Delhi</p>
+          </div>
+        </div>
+        <div class="travellers__card">
+          <img src="assets/traveller-2.jpg" alt="______" />
+          <div class="travellers__card__content">
+            <img src="IMAGES/client1.jpg" alt="client" />
+            <h4>Ravi</h4>
+            <p>New Delhi</p>
+          </div>
+        </div>
+        <div class="travellers__card">
+          <img src="assets/traveller-3.jpg" alt="______" />
+          <div class="travellers__card__content">
+            <img src="IMAGES/client1.jpg" alt="client" />
+            <h4>Sohil</h4>
+            <p>New Delhi</p>
+          </div>
+        </div>
+        <div class="travellers__card">
+          <img src="assets/traveller-4.jpg" alt="______" />
+          <div class="travellers__card__content">
+            <img src="IMAGES/client1.jpg" alt="client" />
+            <h4>Vaishali</h4>
+            <p>New Delhi</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <h2 class="section__header">Subscribe newsletter & get latest news</h2>
+        <form class="subscribe__form">
+          <input type="text" placeholder="Enter your email here" />
+          <button class="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Flydivice
+
+          </h3>
+          <p>
+             Our branch in neharu place 110019.
+          </p>
+          <p>
+             Email :  flydivice@gmail.com.<br/> Mobile :8377849903
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <a href="index.html "><p>Home</p></a>
+          <a href="Book.html"><p>Booking</p></a>
+          <a href=" contact.html"><p>Contact</p></a>
+          <a href="https://web.telegram.org/a/"><p>Products</p></a>
+          <a href="https://web.telegram.org/a/"><p>About</p></a>
+          
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+          <p>Support</p>
+          <p>Media</p>
+          <p>Socials</p>
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>Copyright © 2023 Flydivice. All rights reserved.</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
